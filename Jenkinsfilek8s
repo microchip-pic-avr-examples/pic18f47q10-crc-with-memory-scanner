@@ -9,13 +9,13 @@ pipeline {
 
     parameters {
         string( name: 'NOTIFICATION_EMAIL',
-                defaultValue:  'GateKeepers@microchip.com',
+                defaultValue:  'PICAVR_Examples_GateKeepers@microchip.com',
                 description: "Email to send build failure, fixed and successful deployment notifications.")
     }
 	
 	environment {		
 		GITHUB_URL ='https://github.com/microchip-pic-avr-examples/pic18f47q10-crc-with-memory-scanner.git'
-		BITBUCKET_URL = 'https://bitbucket.microchip.com/scm/ebe/pic18f26k42-curiosity-hpc-labs.git'
+		BITBUCKET_URL = 'https://bitbucket.microchip.com/scm/ebe/pic18f47q10-crc-with-memory-scanner.git'
 		DEPLOY_TOOL_URL = 'https://bitbucket.microchip.com/scm/citd/tool-github-deploy.git'
 		DEPLOY_SCRIPT_DIR = 'tool-github-deploy'
 		DEPLOY_SCRIPT_FILE = 'deploy-source-as-is.sh'
