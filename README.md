@@ -11,7 +11,7 @@ This demo calculates the CRC of the program memory and store it in the EEPROM ar
 
 Figure 1: Program Flowchart
 
-## Related Documentation
+# Related Documentation
 - [PIC18-Q10 Product Family Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family)
 - [PIC18F47Q10 Data Sheet](http://ww1.microchip.com/downloads/en/DeviceDoc/40002043D.pdf)
 - [PIC18F47Q10 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=pic18f47q10-cnano)
@@ -158,6 +158,8 @@ Steps to calculate flash CRC using MCC generated APIs listed in crc.c file:
 * Program the MCU by clicking “Make and Program Device” icon on MPLAB XPRESS IDE as shown in below figure.
 * IDE generates the .hex file, save the file in local PC
 * Drag the .hex from the downloads section and drop the file on to the Curiosity drive. This should program the device
+
+*Note: The additional last 2 steps required for MPLAB XPRESS IDE. For MPLAB X IDE, the only first step is sufficient to program the device*
 ![](https://i.imgur.com/tFBNCw1.jpg)
 
 Figure 11: Make and Program the Device
