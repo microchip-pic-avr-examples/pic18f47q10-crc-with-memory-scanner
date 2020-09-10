@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f47q10-crc-with-memory-scanner",
-        "version": "1.0.1",
+        "version": "1.0.2",
         "displayName": "CRC with Memory Scanner using PIC18",
         "projectName": "pic18f47q10-crc-with-memory-scanner",
         "shortDescription": "This example describes the use of CRC peripheral with hardware-implemented memory scanner to generate checksum of program memory",
