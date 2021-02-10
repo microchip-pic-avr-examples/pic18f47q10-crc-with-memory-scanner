@@ -1,6 +1,6 @@
 [![MCHP](images/microchip.png)](https://www.microchip.com)
 
-# CRC with MEMORY SCANNER using PIC18
+# CRC with MEMORY SCANNER 
 
 # Introduction
 
