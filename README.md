@@ -177,29 +177,30 @@ Steps to calculate flash CRC using MCC generated APIs:
 
 ![program](images/program.jpg)
 
+Figure 12: Program the device
 
 # Demo operation
-* For the first power up or whenever firmware is changed w.r.t earlier firmware , uncomment the line //#define ERASE_EEPROM_CRC in the code, to erase the EEPROM location, which stores the CRC. This makes sure that there isn’t any incorrect or earlier calculated CRC value stored previously at that location. Build the project and program the device. Observe the message displayed on the terminal window.
+* For the first power up or whenever firmware is changed w.r.t earlier firmware , uncomment the line `//#define ERASE_EEPROM_CRC` in the code, to erase the EEPROM location, which stores the CRC. This makes sure that there isn’t any incorrect or earlier calculated CRC value stored previously at that location. Build the project and program the device. Observe the message displayed on the terminal window.
 
 *(Any terminal emulator such as [MPLAB Data Visualizer](https://www.microchip.com/en-us/development-tools-tools-and-software/embedded-software-center/mplab-data-visualizer) can be used. Set baud rate as 9600.)*
 
 ![erase](images/erase.png)
 
-Figure 12: EEPROM erase message
+Figure 13: EEPROM erase message
 
-* For the next power ups, comment the line “#define ERASE_EEPROM_CRC”. Build the project and program the device.
+* For the next power ups, comment the line `#define ERASE_EEPROM_CRC`. Build the project and program the device.
 * Microcontroller calculates and displays the CRC of the program memory on the terminal window. The first calculated CRC is stored in the EEPROM location. The stored CRC then is compared with the calculated CRCs on subsequent power ups of the devices as well as with the periodic calculated CRC. If there is mismatch in CRC, then program execution can be halted, and corresponding action can be taken.
 
 ![first_crc](images/first_crc.png)
 
-Figure 13: First Time CRC calculation
+Figure 14: First Time CRC calculation
 
 * CRC of the program is calculated periodically and displayed on the terminal window.
 * If there is mismatch in the stored CRC and computed CRC, then error message is displayed, and program execution is halted.
 
 ![periodic_crc](images/periodic_crc.png)
 
-Figure 14: Periodic CRC
+Figure 15: Periodic CRC
 
 *Note: CRC in Figure14 is computed using compiler v2.31 with -0 optimization level.*
 
