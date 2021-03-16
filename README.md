@@ -202,7 +202,7 @@ Figure 14: First Time CRC calculation
 
 Figure 15: Periodic CRC
 
-*Note: CRC in Figure14 is computed using compiler v2.31 with -0 optimization level.*
+*Note: CRC in Figure 15 is computed using compiler v2.31 with -0 optimization level.*
 
 # Conclusion
 CRC module in PIC microcontrollers is hardware implemented checksum generator which can compute 16-bit CRC with programmable polynomial. It is also complimented with memory scanner feature which provides automatic flash read for CRC calculation. Configuring the CRC module is easy using the MCC GUI. Apart from the module configuration, MCC generates ready to use APIs, for hassle free calculation of the CRC of the program memory, using CRC and memory scan hardware peripheral in the PIC microcontrollers.
