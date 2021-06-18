@@ -13,7 +13,7 @@ Figure 1: Program Flowchart
 
 # Useful Links
 - [PIC18-Q10 Product Family Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family)
-- [PIC18F47Q10 Data Sheet](https://www.microchip.com/DS40002043)
+- [PIC18F47Q10 Data Sheet](https://www.microchip.com/40002043)
 - [PIC18F47Q10 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=pic18f47q10)
 
 # Hardware Used
@@ -27,12 +27,12 @@ Figure 2: PIC18F47Q10 Curiosity Nano board
 # Software tools
 Microchip’s free MPLAB X IDE, compiler and MPLAB Code Configurator (MCC) graphical code generator are used throughout the application firmware development to provide easy and hassle-free user experience. Following are the tool versions used for this demo application:
 
-* [MPLAB® X IDE v5.45](https://www.microchip.com/mplab/mplab-x-ide)
-* [XC8 Compiler v2.31](https://www.microchip.com/mplab/compilers)
+* [MPLAB® X IDE v5.50](https://www.microchip.com/mplab/mplab-x-ide)
+* [XC8 Compiler v2.32](https://www.microchip.com/mplab/compilers)
 * [MPLAB® Code Configurator (MCC) v4.1.0](https://www.microchip.com/mplab/mplab-code-configurator)
-* [MPLAB®  Code Configurator Library (CCL) v1.37.14](https://www.microchip.com/mplab/mplab-code-configurator)
+* [MPLAB®  Code Configurator Library (CCL) v1.84.3](https://www.microchip.com/mplab/mplab-code-configurator)
 * [MCC Device Libraries PIC10 / PIC12 / PIC16 / PIC18  MCUs v1.81.7](https://www.microchip.com/mplab/mplab-code-configurator)
-* [Microchip PIC18F-Q Series Device Support 1.9.175](https://packs.download.microchip.com/)
+* [Microchip PIC18F-Q Series Device Support 1.11.185](https://packs.download.microchip.com/)
 
 *Note: For running the demo, the installed tool versions should be same or later. This example is not tested with previous versions.*
 
@@ -202,7 +202,7 @@ Figure 14: First Time CRC calculation
 
 Figure 15: Periodic CRC
 
-*Note: CRC in Figure 15 is computed using compiler v2.31 with -0 optimization level.*
+*Note: CRC in Figure 15 is computed using compiler v2.32 with -0 optimization level.*
 
 # Conclusion
 CRC module in PIC microcontrollers is hardware implemented checksum generator which can compute 16-bit CRC with programmable polynomial. It is also complimented with memory scanner feature which provides automatic flash read for CRC calculation. Configuring the CRC module is easy using the MCC GUI. Apart from the module configuration, MCC generates ready to use APIs, for hassle free calculation of the CRC of the program memory, using CRC and memory scan hardware peripheral in the PIC microcontrollers.

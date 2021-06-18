@@ -162,7 +162,8 @@ int main(void)
 */
 uint16_t CalculateFlashCRC(void)
 {
-    uint16_t CRCVal;
+    uint16_t CRCVal = 0;
+    bool busyStatus = 0; 
     
     //Load CRC ACC register with seed value
     CRCACCH = (uint8_t)(CRC_SEED_VALUE >> 8);
@@ -172,10 +173,13 @@ uint16_t CalculateFlashCRC(void)
     CRC_SetScannerAddressLimit(START_ADDRESS, END_ADDRESS);
     // Start Scanner
     CRC_StartScanner();
+  
+    do
+    {
+        busyStatus = CRC_IsCrcBusy() || CRC_IsScannerBusy();   
+    }
+    while(busyStatus);
 
-    // Scan completed?
-    while(CRC_IsCrcBusy() || CRC_IsScannerBusy()); 
-   
     // Read CRC check value
     CRCVal = CRC_GetCalculatedResult(false,0x00);
     

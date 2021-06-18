@@ -4,7 +4,7 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>pic18f47q10-crc-with-memory-scanner</name>
-            <creation-uuid>fed635c9-7363-41a9-b697-dd24ca68e64d</creation-uuid>
+            <creation-uuid>93c01a06-e0a3-457b-aa11-9fb952c96bc4</creation-uuid>
             <make-project-type>0</make-project-type>
             <c-extensions>c</c-extensions>
             <cpp-extensions/>

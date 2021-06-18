@@ -61,12 +61,12 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
 
 void SYSTEM_Initialize(void)
 {
-    EUSART2_Initialize();
-    INTERRUPT_Initialize();
     CLOCK_Initialize();
-    CRC_Initialize();
-    Timer0_Initialize();
-    FLASH_Initialize();
     PIN_MANAGER_Initialize();
+    CRC_Initialize();
+    EUSART2_Initialize();
+    FLASH_Initialize();
+    Timer0_Initialize();
+    INTERRUPT_Initialize();
 }
 

@@ -60,13 +60,13 @@ Copyright (c) [2012-2020] Microchip Technology Inc.
 #include <stdbool.h>
 #include <conio.h>
 #include "config_bits.h"
-#include "../uart/eusart2.h"
-#include "../system/interrupt.h"
 #include "../system/clock.h"
-#include "../crc/crc.h"
-#include "../timer/tmr0.h"
-#include "../flash/flash.h"
 #include "../system/pins.h"
+#include "../crc/crc.h"
+#include "../uart/eusart2.h"
+#include "../flash/flash.h"
+#include "../timer/tmr0.h"
+#include "../system/interrupt.h"
 
 /**
  * @Param

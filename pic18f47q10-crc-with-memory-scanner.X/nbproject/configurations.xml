@@ -1,82 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="65">
-  <logicalFolder name="root" displayName="root" projectFiles="true">
-    <logicalFolder name="HeaderFiles"
-                   displayName="Header Files"
-                   projectFiles="true">
-      <logicalFolder name="MCC Generated Files"
-                     displayName="MCC Generated Files"
-                     projectFiles="true">
-        <logicalFolder name="crc" displayName="crc" projectFiles="true">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><configurationDescriptor version="65">
+  <logicalFolder displayName="root" name="root" projectFiles="true">
+    <logicalFolder displayName="Header Files" name="HeaderFiles" projectFiles="true">
+      <logicalFolder displayName="MCC Generated Files" name="MCC Generated Files" projectFiles="true">
+        <logicalFolder displayName="crc" name="crc" projectFiles="true">
           <itemPath>mcc_generated_files/crc/crc.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="flash" displayName="flash" projectFiles="true">
+        <logicalFolder displayName="flash" name="flash" projectFiles="true">
           <itemPath>mcc_generated_files/flash/flash.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="system" displayName="system" projectFiles="true">
-          <itemPath>mcc_generated_files/system/interrupt.h</itemPath>
+        <logicalFolder displayName="system" name="system" projectFiles="true">
           <itemPath>mcc_generated_files/system/system.h</itemPath>
           <itemPath>mcc_generated_files/system/config_bits.h</itemPath>
-          <itemPath>mcc_generated_files/system/clock.h</itemPath>
           <itemPath>mcc_generated_files/system/pins.h</itemPath>
+          <itemPath>mcc_generated_files/system/clock.h</itemPath>
+          <itemPath>mcc_generated_files/system/interrupt.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="timer" displayName="timer" projectFiles="true">
-          <itemPath>mcc_generated_files/timer/timer_interface.h</itemPath>
+        <logicalFolder displayName="timer" name="timer" projectFiles="true">
           <itemPath>mcc_generated_files/timer/tmr0.h</itemPath>
+          <itemPath>mcc_generated_files/timer/timer_interface.h</itemPath>
         </logicalFolder>
-        <logicalFolder name="uart" displayName="uart" projectFiles="true">
-          <itemPath>mcc_generated_files/uart/uart_interface.h</itemPath>
+        <logicalFolder displayName="uart" name="uart" projectFiles="true">
           <itemPath>mcc_generated_files/uart/eusart2.h</itemPath>
+          <itemPath>mcc_generated_files/uart/uart_interface.h</itemPath>
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
-    <logicalFolder name="LinkerScript"
-                   displayName="Linker Files"
-                   projectFiles="true">
+    <logicalFolder displayName="Linker Files" name="LinkerScript" projectFiles="true">
     </logicalFolder>
-    <logicalFolder name="SourceFiles"
-                   displayName="Source Files"
-                   projectFiles="true">
-      <logicalFolder name="MCC Generated Files"
-                     displayName="MCC Generated Files"
-                     projectFiles="true">
-        <logicalFolder name="crc" displayName="crc" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
+    <logicalFolder displayName="Source Files" name="SourceFiles" projectFiles="true">
+      <logicalFolder displayName="MCC Generated Files" name="MCC Generated Files" projectFiles="true">
+        <logicalFolder displayName="crc" name="crc" projectFiles="true">
+          <logicalFolder displayName="src" name="src" projectFiles="true">
             <itemPath>mcc_generated_files/crc/src/crc.c</itemPath>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="flash" displayName="flash" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
+        <logicalFolder displayName="flash" name="flash" projectFiles="true">
+          <logicalFolder displayName="src" name="src" projectFiles="true">
             <itemPath>mcc_generated_files/flash/src/flash.c</itemPath>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="system" displayName="system" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
-            <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
+        <logicalFolder displayName="system" name="system" projectFiles="true">
+          <logicalFolder displayName="src" name="src" projectFiles="true">
             <itemPath>mcc_generated_files/system/src/clock.c</itemPath>
-            <itemPath>mcc_generated_files/system/src/system.c</itemPath>
+            <itemPath>mcc_generated_files/system/src/config_bits.c</itemPath>
             <itemPath>mcc_generated_files/system/src/pins.c</itemPath>
             <itemPath>mcc_generated_files/system/src/interrupt.c</itemPath>
+            <itemPath>mcc_generated_files/system/src/system.c</itemPath>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="timer" displayName="timer" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
+        <logicalFolder displayName="timer" name="timer" projectFiles="true">
+          <logicalFolder displayName="src" name="src" projectFiles="true">
             <itemPath>mcc_generated_files/timer/src/tmr0.c</itemPath>
           </logicalFolder>
         </logicalFolder>
-        <logicalFolder name="uart" displayName="uart" projectFiles="true">
-          <logicalFolder name="src" displayName="src" projectFiles="true">
+        <logicalFolder displayName="uart" name="uart" projectFiles="true">
+          <logicalFolder displayName="src" name="src" projectFiles="true">
             <itemPath>mcc_generated_files/uart/src/eusart2.c</itemPath>
           </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
+    <logicalFolder displayName="Important Files" name="ExternalFiles" projectFiles="false">
       <itemPath>Makefile</itemPath>
-      <itemPath>ccl-crc-1-37-14.mc3</itemPath>
+      <itemPath>pic18f47q10-crc-with-memory-scanner.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
@@ -85,15 +72,15 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F47Q10</targetDevice>
-        <targetHeader></targetHeader>
-        <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <targetHeader/>
+        <targetPluginBoard/>
+        <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.31</languageToolchainVersion>
+        <languageToolchainVersion>2.32</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.9.175"/>
+        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.11.185"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -107,7 +94,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile></alternateLoadableFile>
+          <alternateLoadableFile/>
         </loading>
         <subordinates>
         </subordinates>
@@ -115,9 +102,9 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPreStep/>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPostStep/>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -146,9 +133,9 @@
         <property key="optimization-level" value="-O0"/>
         <property key="optimization-speed" value="false"/>
         <property key="optimization-stable-enable" value="false"/>
-        <property key="pack-struct" value="true"/>
         <property key="preprocess-assembler" value="true"/>
         <property key="short-enums" value="true"/>
+        <property key="tentative-definitions" value=""/>
         <property key="undefine-macros" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
@@ -202,8 +189,47 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <Tool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="Freeze Peripherals" value="true"/>
+        <property key="communication.activationmode" value="nohv"/>
+        <property key="communication.interface" value="${communication.interface.default}"/>
+        <property key="communication.speed" value="${communication.speed.default}"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.path" value="Press to browse for a specific firmware version"/>
+        <property key="firmware.toolpack" value="Press to select which tool pack to use"/>
+        <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="freeze.timers" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.exclude.configurationmemory" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-1ffff"/>
+        <property key="memories.rww" value="true"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value="310000-3103ff"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
+        <property key="voltagevalue" value=""/>
+      </Tool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </XC8-CO>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>
@@ -224,14 +250,11 @@
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="Freeze Peripherals" value="true"/>
         <property key="communication.activationmode" value="nohv"/>
-        <property key="communication.interface"
-                  value="${communication.interface.default}"/>
+        <property key="communication.interface" value="${communication.interface.default}"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.path"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="firmware.toolpack"
-                  value="Press to select which tool pack to use"/>
+        <property key="firmware.path" value="Press to browse for a specific firmware version"/>
+        <property key="firmware.toolpack" value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
         <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -243,26 +266,23 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath" value="D:/Work/Projects/CCL Migration/CRC/1-84-3/pic18f47q10-crc-with-memory-scanner.X/debug/free/pic18f47q10-crc-with-memory-scanner_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value="310000-3103ff"/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value=""/>
       </nEdbgTool>
     </conf>
@@ -270,15 +290,15 @@
       <toolsSet>
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F47Q10</targetDevice>
-        <targetHeader></targetHeader>
-        <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <targetHeader/>
+        <targetPluginBoard/>
+        <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>2.31</languageToolchainVersion>
+        <languageToolchainVersion>2.32</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.9.175"/>
+        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.11.185"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -292,7 +312,7 @@
         <loading>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
-          <alternateLoadableFile></alternateLoadableFile>
+          <alternateLoadableFile/>
         </loading>
         <subordinates>
         </subordinates>
@@ -300,9 +320,9 @@
       <makeCustomizationType>
         <makeCustomizationPreStepEnabled>false</makeCustomizationPreStepEnabled>
         <makeUseCleanTarget>false</makeUseCleanTarget>
-        <makeCustomizationPreStep></makeCustomizationPreStep>
+        <makeCustomizationPreStep/>
         <makeCustomizationPostStepEnabled>false</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep></makeCustomizationPostStep>
+        <makeCustomizationPostStep/>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -331,9 +351,9 @@
         <property key="optimization-level" value="-Os"/>
         <property key="optimization-speed" value="false"/>
         <property key="optimization-stable-enable" value="false"/>
-        <property key="pack-struct" value="true"/>
         <property key="preprocess-assembler" value="true"/>
         <property key="short-enums" value="true"/>
+        <property key="tentative-definitions" value=""/>
         <property key="undefine-macros" value=""/>
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
@@ -387,8 +407,47 @@
         <property key="program-the-device-with-default-config-words" value="true"/>
         <property key="remove-unused-sections" value="true"/>
       </HI-TECH-LINK>
+      <Tool>
+        <property key="AutoSelectMemRanges" value="auto"/>
+        <property key="Freeze Peripherals" value="true"/>
+        <property key="communication.activationmode" value="nohv"/>
+        <property key="communication.interface" value="${communication.interface.default}"/>
+        <property key="communication.speed" value="${communication.speed.default}"/>
+        <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="firmware.path" value="Press to browse for a specific firmware version"/>
+        <property key="firmware.toolpack" value="Press to select which tool pack to use"/>
+        <property key="firmware.update.action" value="firmware.update.use.latest"/>
+        <property key="freeze.timers" value="false"/>
+        <property key="memories.aux" value="false"/>
+        <property key="memories.bootflash" value="true"/>
+        <property key="memories.configurationmemory" value="true"/>
+        <property key="memories.configurationmemory2" value="true"/>
+        <property key="memories.dataflash" value="true"/>
+        <property key="memories.eeprom" value="true"/>
+        <property key="memories.exclude.configurationmemory" value="true"/>
+        <property key="memories.flashdata" value="true"/>
+        <property key="memories.id" value="true"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.programmemory" value="true"/>
+        <property key="memories.programmemory.ranges" value="0-1ffff"/>
+        <property key="memories.rww" value="true"/>
+        <property key="poweroptions.powerenable" value="false"/>
+        <property key="programoptions.eraseb4program" value="true"/>
+        <property key="programoptions.preservedataflash" value="false"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
+        <property key="programoptions.preserveeeprom" value="false"/>
+        <property key="programoptions.preserveeeprom.ranges" value="310000-3103ff"/>
+        <property key="programoptions.preserveprogram.ranges" value=""/>
+        <property key="programoptions.preserveprogramrange" value="false"/>
+        <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.programuserotp" value="false"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
+        <property key="voltagevalue" value=""/>
+      </Tool>
       <XC8-CO>
         <property key="coverage-enable" value=""/>
+        <property key="stack-guidance" value="false"/>
       </XC8-CO>
       <XC8-config-global>
         <property key="advanced-elf" value="true"/>
@@ -409,14 +468,11 @@
         <property key="AutoSelectMemRanges" value="auto"/>
         <property key="Freeze Peripherals" value="true"/>
         <property key="communication.activationmode" value="nohv"/>
-        <property key="communication.interface"
-                  value="${communication.interface.default}"/>
+        <property key="communication.interface" value="${communication.interface.default}"/>
         <property key="communication.speed" value="${communication.speed.default}"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
-        <property key="firmware.path"
-                  value="Press to browse for a specific firmware version"/>
-        <property key="firmware.toolpack"
-                  value="Press to select which tool pack to use"/>
+        <property key="firmware.path" value="Press to browse for a specific firmware version"/>
+        <property key="firmware.toolpack" value="Press to select which tool pack to use"/>
         <property key="firmware.update.action" value="firmware.update.use.latest"/>
         <property key="freeze.timers" value="false"/>
         <property key="memories.aux" value="false"/>
@@ -428,26 +484,23 @@
         <property key="memories.exclude.configurationmemory" value="true"/>
         <property key="memories.flashdata" value="true"/>
         <property key="memories.id" value="true"/>
-        <property key="memories.instruction.ram.ranges"
-                  value="${memories.instruction.ram.ranges}"/>
+        <property key="memories.instruction.ram.ranges" value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="memories.rww" value="true"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath" value="D:/Work/Projects/CCL Migration/CRC/1-84-3/pic18f47q10-crc-with-memory-scanner.X/debug/pro/pic18f47q10-crc-with-memory-scanner_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
-        <property key="programoptions.preservedataflash.ranges"
-                  value="${memories.dataflash.default}"/>
+        <property key="programoptions.preservedataflash.ranges" value="${memories.dataflash.default}"/>
         <property key="programoptions.preserveeeprom" value="false"/>
         <property key="programoptions.preserveeeprom.ranges" value="310000-3103ff"/>
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
-        <property key="toolpack.updateoptions"
-                  value="toolpack.updateoptions.uselatestoolpack"/>
-        <property key="toolpack.updateoptions.packversion"
-                  value="Press to select which tool pack to use"/>
+        <property key="toolpack.updateoptions" value="toolpack.updateoptions.uselatestoolpack"/>
+        <property key="toolpack.updateoptions.packversion" value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value=""/>
       </nEdbgTool>
     </conf>
