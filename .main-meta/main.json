@@ -44,7 +44,7 @@
             ],
             [
                "Peripherals", "NVM"
-            ],
+            ]
         ],
         "peripherals": [
             "CRC","NVM"
