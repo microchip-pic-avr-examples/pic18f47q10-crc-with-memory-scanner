@@ -4,23 +4,23 @@
     "content": {
         "metaDataVersion": "1.1.0",
         "name": "com.microchip.mcu8.mplabx.project.pic18f47q10-crc-with-memory-scanner",
-        "version": "2.0.0",
+        "version": "2.0.1",
         "displayName": "CRC with Memory Scanner",
         "projectName": "pic18f47q10-crc-with-memory-scanner",
         "shortDescription": "This example describes the use of CRC peripheral with hardware-implemented memory scanner to generate checksum of program memory",
         "ide": {
             "name": "MPLAB X",
-            "semverRange": ">=5.45.0"
+            "semverRange": ">=5.50.0"
         },
         "compiler": [
 			{
 				"name": "XC8",
-				"semverRange": "^2.31.0"
+				"semverRange": "^2.32.0"
 			}
 		],
         "dfp": {
             "name": "PIC18F-Q_DFP",
-            "semverRange": "^1.9.175"
+            "semverRange": "^1.11.185"
         },
         "configurator": {
             "name": "MCC",
@@ -45,15 +45,9 @@
             [
                "Peripherals", "NVM"
             ],
-            [
-               "Peripherals", "EUSART"
-            ],
-            [
-               "Peripherals", "TMR0"
-            ]
         ],
         "peripherals": [
-            "CRC","NVM","EUSART","TMR0"
+            "CRC","NVM"
         ],
         "keywords": [
             "CRC Scan",
