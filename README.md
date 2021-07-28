@@ -19,7 +19,7 @@ Figure 1: Program Flowchart
 # Hardware Used
 * [PIC18F47Q10 Curiosity Nano](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
 
-With full program and debug capabilities, the PIC18F47Q10 Curiosity Nano evaluation kit offers complete support for the new design. With the award-winning MPLAB X integrated development platform and MPLAB Code Configurator (MCC), the kit provides access to the Intelligent analog and Core Independent Peripherals on the PIC18F47Q10.
+With full program and debug capabilities, the PIC18F47Q10 Curiosity Nano evaluation kit offers complete support for the new design. With the MPLAB X IDE and MPLAB Code Configurator (MCC), the kit provides access to the Intelligent analog and Core Independent Peripherals on the PIC18F47Q10.
 
 [![MCHP](images/curiosity_nano.png)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
 
@@ -27,12 +27,12 @@ Figure 2: PIC18F47Q10 Curiosity Nano board
 # Software tools
 Microchip’s free MPLAB X IDE, compiler and MPLAB Code Configurator (MCC) graphical code generator are used throughout the application firmware development to provide easy and hassle-free user experience. Following are the tool versions used for this demo application:
 
-* [MPLAB® X IDE v5.50](https://www.microchip.com/mplab/mplab-x-ide)
-* [XC8 Compiler v2.32](https://www.microchip.com/mplab/compilers)
-* [MPLAB® Code Configurator (MCC) v4.1.0](https://www.microchip.com/mplab/mplab-code-configurator)
-* [MPLAB®  Code Configurator Library (CCL) v1.84.3](https://www.microchip.com/mplab/mplab-code-configurator)
-* [MCC Device Libraries PIC10 / PIC12 / PIC16 / PIC18  MCUs v1.81.7](https://www.microchip.com/mplab/mplab-code-configurator)
-* [Microchip PIC18F-Q Series Device Support 1.11.185](https://packs.download.microchip.com/)
+* MPLAB® X IDE [v5.50 or newer](https://www.microchip.com/mplab/mplab-x-ide)
+* XC8 Compiler [v2.32 or newer](https://www.microchip.com/mplab/compilers)
+* MPLAB® Code Configurator (MCC) [v4.1.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+* MPLAB®  Code Configurator Library (CCL) [v1.84.3 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+* MCC Device Libraries PIC10 / PIC12 / PIC16 / PIC18  MCUs [v1.81.7 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+* Microchip PIC18F-Q Series Device Support [1.11.185 or newer](https://packs.download.microchip.com/)
 
 *Note: For running the demo, the installed tool versions should be same or later. This example is not tested with previous versions.*
 
