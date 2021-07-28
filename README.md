@@ -13,7 +13,7 @@ Figure 1: Program Flowchart
 
 # Useful Links
 - [PIC18-Q10 Product Family Page](https://www.microchip.com/design-centers/8-bit/pic-mcus/device-selection/pic18f-q10-product-family)
-- [PIC18F47Q10 Data Sheet](https://www.microchip.com/40002043)
+- [PIC18F47Q10 Data Sheet](https://www.microchip.com/DS40002043)
 - [PIC18F47Q10 Code Examples on GitHub](https://github.com/microchip-pic-avr-examples?q=pic18f47q10)
 
 # Hardware Used
