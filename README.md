@@ -27,12 +27,14 @@ Figure 2: PIC18F47Q10 Curiosity Nano board
 # Software tools
 Microchip’s free MPLAB X IDE, compiler and MPLAB Code Configurator (MCC) graphical code generator are used throughout the application firmware development to provide easy and hassle-free user experience. Following are the tool versions used for this demo application:
 
-* MPLAB® X IDE [v5.50 or newer](https://www.microchip.com/mplab/mplab-x-ide)
-* XC8 Compiler [v2.32 or newer](https://www.microchip.com/mplab/compilers)
-* MPLAB® Code Configurator (MCC) [v4.1.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
-* MPLAB®  Code Configurator Library (CCL) [v1.84.3 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
-* MCC Device Libraries PIC10 / PIC12 / PIC16 / PIC18  MCUs [v1.81.7 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
-* Microchip PIC18F-Q Series Device Support [1.11.185 or newer](https://packs.download.microchip.com/)
+* MPLAB® X IDE [v6.05 or newer](https://www.microchip.com/mplab/mplab-x-ide)
+* XC8 Compiler [v2.41 or newer](https://www.microchip.com/mplab/compilers)
+* MPLAB® Code Configurator (MCC) [v5.3.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+* Microchip PIC18F-Q Series Device Support [1.14.237 or newer](https://packs.download.microchip.com/)
+* CRC Driver [v4.0.2 or newer]
+* MEMORY Driver [v4.0.0 or newer]
+* TMR0 Driver [v4.0.11 or newer]
+* UART Driver  [v1.8.0 or newer]
 
 *Note: For running the demo, the installed tool versions should be same or later. This example is not tested with previous versions.*
 
@@ -70,7 +72,7 @@ Figure 4: Configuration Bits
 
 *  **Add peripherals to the project**
 
-Add CRC, EUSART2, TMR0 and MEMORY peripherals to the project.
+Add CRC, UART2, TMR0 and NVM peripherals to the project.
 
 Make sure to add peripherals present under "Drivers" dropdown menu in "Device Resources" tab.
 
@@ -94,25 +96,22 @@ Figure 6: CRC Configuration
 
 * **Configure Memory peripheral**
 
-Verify that “Add DataEE Routines” is set (We will use these routines to write EEPROM data)
+Verify that “Generate EEPROM APIs” is set (We will use these APIs to write EEPROM data)
 
 ![memory](images/memory.png)
 
 Figure 7: Memory Configuration
 
-* **Configure EUSART2 Peripheral**
+* **Configure UART2 Peripheral**
 
-In this demo, EUSART2 is used to transmit data on the terminal window to display the stored and computed CRC value as well as the error message if there is any mismatch in the CRC is detected.
+In this demo, UART2 is used to transmit data on the terminal window to display the stored and computed CRC value as well as the error message if there is any mismatch in the CRC is detected.
 
-* Enable "Redirect STDIO to EUSART"
+* Enable "Redirect Printf to UART"
 * Set the Baud Rate to 9600
-* Disable Receive
-* Verify that Transmit is enabled
-* Verify that Serial Port is enabled
 
-![eusart](images/eusart2.png)
+![uart](images/eusart2.png)
 
-Figure 8: EUSART2 Configuration
+Figure 8: UART2 Configuration
 
 * **Configure TMR0 Peripheral**
 
@@ -133,13 +132,13 @@ Figure 9: Timer 0 Configuration
 
 * Set RE0 as output pin using pin Manager: Grid View. LED is connected to pin RE0.
 * Select RD0 as EUSART2: TX2 output.
-* RB7 used for RX2 and RA4 used for T0CKI can be deselected.
+* RB7 used for RX2.
 
 ![pin_manager_grid](images/pin_manager_grid.png)
 
 Figure 10: Pin Manager: Grid View
 
-Add custom name to the RE0 output pin as LED, using Project Resources → System → Pin Manager. Check the "Start High" check box for LED pin RE0 for turning off the LED.
+Add custom name to the RE0 output pin as LED, using Project Resources → System → Pins. Check the "Start High" check box for LED pin RE0 for turning off the LED.
 
 ![pin_manager](images/pin_manager.png)
 
@@ -175,7 +174,7 @@ Steps to calculate flash CRC using MCC generated APIs:
 4. **Build the project file and program the device**
 * Connect PIC18F47Q10 Curiosity Nano to PC using USB cable. Program the microcontroller by clicking “Make and Program Device” icon on MPLAB X IDE as shown in below figure.
 
-![program](images/program.jpg)
+![program](images/program.png)
 
 Figure 12: Program the device
 
@@ -202,7 +201,7 @@ Figure 14: First Time CRC calculation
 
 Figure 15: Periodic CRC
 
-*Note: CRC in Figure 15 is computed using compiler v2.32 with -0 optimization level.*
+*Note: CRC in Figure 15 is computed using compiler v2.41 with -0 optimization level.*
 
 # Conclusion
 CRC module in PIC microcontrollers is hardware implemented checksum generator which can compute 16-bit CRC with programmable polynomial. It is also complimented with memory scanner feature which provides automatic flash read for CRC calculation. Configuring the CRC module is easy using the MCC GUI. Apart from the module configuration, MCC generates ready to use APIs, for hassle free calculation of the CRC of the program memory, using CRC and memory scan hardware peripheral in the PIC microcontrollers.

@@ -1,56 +1,33 @@
 /**
-  TMR0 Generated Driver File
- 
-  @Company
-    Microchip Technology Inc.
- 
-  @File Name
-    tmr0.c
- 
-  @Summary
-    This is the generated driver implementation file for the TMR0 driver
- 
-  @Description
-    This source file provides APIs for driver for TMR0.
-    Generation Information :
-        Driver Version    :  2.01
-    The generated drivers are tested against the following:
-        Compiler          :  XC8 v2.31
-        MPLAB             :  MPLAB X v5.45
+ * TMR0 Generated Driver File
+ * 
+ * @file tmr0.c
+ * 
+ * @ingroup tmr0
+ * 
+ * @brief  Driver implementation for the TMR0 driver
+ *
+ * @version TMR0 Driver Version 2.1.0
 */
-
 /*
-Copyright (c) [2012-2020] Microchip Technology Inc.  
+© [2023] Microchip Technology Inc. and its subsidiaries.
 
-    All rights reserved.
-
-    You are permitted to use the accompanying software and its derivatives 
-    with Microchip products. See the Microchip license agreement accompanying 
-    this software, if any, for additional info regarding your rights and 
-    obligations.
-    
-    MICROCHIP SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS" WITHOUT 
-    WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT 
-    LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT 
-    AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT WILL MICROCHIP OR ITS
-    LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT, NEGLIGENCE, STRICT 
-    LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER LEGAL EQUITABLE 
-    THEORY FOR ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES INCLUDING BUT NOT 
-    LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES, 
-    OR OTHER SIMILAR COSTS. 
-    
-    To the fullest extend allowed by law, Microchip and its licensors 
-    liability will not exceed the amount of fees, if any, that you paid 
-    directly to Microchip to use this software. 
-    
-    THIRD PARTY SOFTWARE:  Notwithstanding anything to the contrary, any 
-    third party software accompanying this software is subject to the terms 
-    and conditions of the third party's license agreement.  To the extent 
-    required by third party licenses covering such third party software, 
-    the terms of such license will apply in lieu of the terms provided in 
-    this notice or applicable license.  To the extent the terms of such 
-    third party licenses prohibit any of the restrictions described here, 
-    such restrictions will not apply to such third party software.
+    Subject to your compliance with these terms, you may use Microchip 
+    software and any derivatives exclusively with Microchip products. 
+    You are responsible for complying with 3rd party license terms  
+    applicable to your use of 3rd party software (including open source  
+    software) that may accompany Microchip software. SOFTWARE IS ?AS IS.? 
+    NO WARRANTIES, WHETHER EXPRESS, IMPLIED OR STATUTORY, APPLY TO THIS 
+    SOFTWARE, INCLUDING ANY IMPLIED WARRANTIES OF NON-INFRINGEMENT,  
+    MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT 
+    WILL MICROCHIP BE LIABLE FOR ANY INDIRECT, SPECIAL, PUNITIVE, 
+    INCIDENTAL OR CONSEQUENTIAL LOSS, DAMAGE, COST OR EXPENSE OF ANY 
+    KIND WHATSOEVER RELATED TO THE SOFTWARE, HOWEVER CAUSED, EVEN IF 
+    MICROCHIP HAS BEEN ADVISED OF THE POSSIBILITY OR THE DAMAGES ARE 
+    FORESEEABLE. TO THE FULLEST EXTENT ALLOWED BY LAW, MICROCHIP?S 
+    TOTAL LIABILITY ON ALL CLAIMS RELATED TO THE SOFTWARE WILL NOT 
+    EXCEED AMOUNT OF FEES, IF ANY, YOU PAID DIRECTLY TO MICROCHIP FOR 
+    THIS SOFTWARE.
 */
 
 #include <xc.h>
@@ -61,7 +38,7 @@ const struct TMR_INTERFACE Timer0 = {
     .Initialize = Timer0_Initialize,
     .Start = Timer0_Start,
     .Stop = Timer0_Stop,
-    .PeriodCountSet = Timer0_Write,
+    .PeriodCountSet = Timer0_Reload,
     .TimeoutCallbackRegister = Timer0_OverflowCallbackRegister,
     .Tasks = NULL
 };
@@ -114,16 +91,16 @@ uint8_t Timer0_Read(void)
     return readVal;
 }
 
-void Timer0_Write(size_t timerVal)
+void Timer0_Write(uint8_t timerVal)
 {
     //Write to TMR0 register, low byte only
-    TMR0L = (uint8_t)timerVal;
+    TMR0L = timerVal;
  }
 
-void Timer0_Reload(uint8_t periodVal)
+void Timer0_Reload(size_t periodVal)
 {
    //Write to TMR0 register, high byte only
-   TMR0H = periodVal;
+   TMR0H = (uint8_t)periodVal;
 }
 
 void Timer0_OverflowISR(void)
