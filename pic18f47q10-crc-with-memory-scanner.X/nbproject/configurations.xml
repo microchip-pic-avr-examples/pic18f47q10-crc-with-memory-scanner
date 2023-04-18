@@ -94,7 +94,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.14.237"/>
+        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.17.379"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -304,7 +304,7 @@
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/I74666/OneDrive - Microchip Technology Inc/Documents/Anoop Data/Projects/pic18f47q10_crc/pic18f47q10-crc-with-memory-scanner/pic18f47q10-crc-with-memory-scanner.X/debug/free/pic18f47q10-crc-with-memory-scanner_ptg"/>
+                  value="C:/Users/I74666/OneDrive - Microchip Technology Inc/Documents/Anoop Data/Trainings/Pic18F47Q10-crc-memory-scan/pic18f47q10-crc-memory-scan.X/debug/free/pic18f47q10-crc-memory-scan_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -334,7 +334,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.14.237"/>
+        <pack name="PIC18F-Q_DFP" vendor="Microchip" version="1.17.379"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -473,6 +473,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/I74666/OneDrive - Microchip Technology Inc/Documents/Anoop Data/Projects/pic18f47q10_crc/pic18f47q10-crc-with-memory-scanner/pic18f47q10-crc-with-memory-scanner.X/debug/pro/pic18f47q10-crc-with-memory-scanner_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

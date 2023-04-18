@@ -19,42 +19,43 @@ Figure 1: Program Flowchart
 # Hardware Used
 * [PIC18F47Q10 Curiosity Nano](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
 
-With full program and debug capabilities, the PIC18F47Q10 Curiosity Nano evaluation kit offers complete support for the new design. With the MPLAB X IDE and MPLAB Code Configurator (MCC), the kit provides access to the Intelligent analog and Core Independent Peripherals on the PIC18F47Q10.
+With full program and debug capabilities, the PIC18F47Q10 Curiosity Nano evaluation kit offers complete support for the new design. The kit uses the MPLAB® X IDE and MPLAB® Code Configurator (MCC), providing access to the Intelligent Analog and Core Independent Peripherals on the PIC18F47Q10.
 
 [![MCHP](images/curiosity_nano.png)](https://www.microchip.com/Developmenttools/ProductDetails/DM182029)
 
 Figure 2: PIC18F47Q10 Curiosity Nano board
 # Software tools
-Microchip’s free MPLAB X IDE, compiler and MPLAB Code Configurator (MCC) graphical code generator are used throughout the application firmware development to provide easy and hassle-free user experience. Following are the tool versions used for this demo application:
+Microchip’s free MPLAB X IDE, compiler and MPLAB Code Configurator (MCC) graphical code generator are used throughout the application firmware development to provide an easy and hassle-free user experience. Following are the tool versions used for this demo application:
 
-* MPLAB® X IDE [v6.05 or newer](https://www.microchip.com/mplab/mplab-x-ide)
+* MPLAB X IDE [v6.05 or newer](https://www.microchip.com/mplab/mplab-x-ide)
 * XC8 Compiler [v2.41 or newer](https://www.microchip.com/mplab/compilers)
-* MPLAB® Code Configurator (MCC) [v5.3.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
-* Microchip PIC18F-Q Series Device Support [1.14.237 or newer](https://packs.download.microchip.com/)
+* MPLAB Code Configurator (MCC) [v5.3.0 or newer](https://www.microchip.com/mplab/mplab-code-configurator)
+* Microchip PIC18F-Q Series Device Support [v1.17.379 or newer](https://packs.download.microchip.com/)
 * CRC Driver [v4.0.2 or newer]
 * MEMORY Driver [v4.0.0 or newer]
 * TMR0 Driver [v4.0.11 or newer]
 * UART Driver  [v1.8.0 or newer]
 
-*Note: For running the demo, the installed tool versions should be same or later. This example is not tested with previous versions.*
+*Note: For running the demo, the installed tool versions must be the same or later. This example is not tested with previous versions.*
 
 # Demo realization
-1. **Start by creating a new Project and open MCC**
+1. Start by creating a new Project and open MCC
 
-	* Go to File > New Project
-	* Select Microchip Embedded > Standalone Project
-	* Enter the device name. In this case we are using the PIC18F47Q10
+	* Go to **File** and click **New Project**
+	* Select **Microchip Embedded** and click **Standalone Project**
+	* Enter the device name, in this case, PIC18F47Q10
 	* Name the project
 	* Open the MCC by clicking on MCC logo
 
-2. **Configure the hardware peripherals**
 
-*  **Configure Clock**
+2. Configure the hardware peripherals
 
-Open "Clock Control" setup present under "System" dropdown menu in "Project Resources" tab.
-* Set "Clock Source" as "HFINTOSC"
-* Set "HF Internal Clock" as "1_MHz"
-* Set "Clock Divider" as "1"
+* **Configure Clock**
+
+Open the **Clock Control** setup present under "System" dropdown menu in the **Project Resources** tab.
+* Set Clock Source as HFINTOSC
+* Set HF Internal Clock as 1_MHz
+* Set Clock Divider as 1
 
 ![clock_control](images/clock_control.png)
 
@@ -62,9 +63,9 @@ Figure 3: Clock Control
 
 *	**Configure Configuration Bits**
 
-Open "Configuration Bits" setup present under "System" dropdown menu in "Project Resources" tab.
+Open the **Configuration Bits** setup present under "System" dropdown menu in the **Project Resources** tab.
 
-* Set "WDT Operating Mode" bit of CONFIG3L register to "WDT Disabled" to disable the watchdog timer.
+* Set WDT Operating Mode bit of CONFIG3L register to WDT Disabled to disable the watchdog timer.
 
 ![configuration_bits](images/configuration_bits.png)
 
@@ -74,7 +75,7 @@ Figure 4: Configuration Bits
 
 Add CRC, UART2, TMR0 and NVM peripherals to the project.
 
-Make sure to add peripherals present under "Drivers" dropdown menu in "Device Resources" tab.
+Make sure to add peripherals present under **Drivers** dropdown menu in **Device Resources** tab.
 
 ![peripherals](images/peripherals.png)
 
@@ -83,11 +84,11 @@ Figure 5: Peripherals
 * **Configure the CRC peripheral**
 
 * Verify that CRC is enabled
-* Verify that “Use Pre-defined Polynomial” is enabled
-* Select “CRC-16-CCITT” from list of "Pre-defined Polynomial"
-* Set the “Seed” value to “0xFFFF”
-* Set "Augmentation Mode" to "data not augmented with 0's"
-* Set “Data Word Width (bits)” to “16” (As Flash memory data width is 16-bits)
+* Verify that Use Pre-defined Polynomial is enabled
+* Select CRC-16-CCITT from list of Pre-defined Polynomial
+* Set the Seed value to 0xFFFF
+* Set Augmentation Mode to data not augmented with 0's
+* Set Data Word Width (bits) to 16 (As Flash memory data width is 16-bits)
 * Verify that Scanner is enabled (We will use scanner to fetch data from memory)
 
 ![crc](images/crc.png)
@@ -96,7 +97,7 @@ Figure 6: CRC Configuration
 
 * **Configure Memory peripheral**
 
-Verify that “Generate EEPROM APIs” is set (We will use these APIs to write EEPROM data)
+Verify that Generate EEPROM APIs is set (We will use these APIs to write EEPROM data)
 
 ![memory](images/memory.png)
 
@@ -106,7 +107,7 @@ Figure 7: Memory Configuration
 
 In this demo, UART2 is used to transmit data on the terminal window to display the stored and computed CRC value as well as the error message if there is any mismatch in the CRC is detected.
 
-* Enable "Redirect Printf to UART"
+* Enable the Redirect Printf to UART
 * Set the Baud Rate to 9600
 
 ![uart](images/eusart2.png)
@@ -115,13 +116,13 @@ Figure 8: UART2 Configuration
 
 * **Configure TMR0 Peripheral**
 
-In this demo Timer 0 is used to generate periodic event for checking the CRC of the program memory.
-Timer 0 period can be changed to change the CRC calculation frequency.
+In this demo Timer 0 is used to generate a periodic event for checking the CRC of the program memory.
+Timer 0 period can be adjusted to change the CRC calculation frequency.
 
 * Verify that Timer is enabled
 * Select the clock pre-scaler as 1:32768
 * Select the clock source as LFINTOSC
-* Set the desired timer period. The period selected in this example is 20 s
+* Set the desired timer period. The period selected in this example is 20s
 * Enable Timer Interrupt
 
 ![tmr0](images/tmr0.png)
@@ -144,7 +145,7 @@ Add custom name to the RE0 output pin as LED, using Project Resources → System
 
 Figure 11: Pin Manager
 
-3. **Generate the Project files**
+3. Generate the Project files
 * Click the Generate button next to the project Resources heading to generate Initializers and drivers for configured peripherals. Next step is to add custom code to complete the example as following.
 
 **Open main.c file.**
@@ -171,8 +172,8 @@ Steps to calculate flash CRC using MCC generated APIs:
 
 `CRC_GetCalculatedResult(false,0x00);`
 
-4. **Build the project file and program the device**
-* Connect PIC18F47Q10 Curiosity Nano to PC using USB cable. Program the microcontroller by clicking “Make and Program Device” icon on MPLAB X IDE as shown in below figure.
+4. Build the project file and program the device
+* Connect PIC18F47Q10 Curiosity Nano to the PC using an USB cable. Program the microcontroller by clicking **Make and Program Device** icon on MPLAB X IDE, as shown in figure below.
 
 ![program](images/program.png)
 
@@ -204,4 +205,4 @@ Figure 15: Periodic CRC
 *Note: CRC in Figure 15 is computed using compiler v2.41 with -0 optimization level.*
 
 # Conclusion
-CRC module in PIC microcontrollers is hardware implemented checksum generator which can compute 16-bit CRC with programmable polynomial. It is also complimented with memory scanner feature which provides automatic flash read for CRC calculation. Configuring the CRC module is easy using the MCC GUI. Apart from the module configuration, MCC generates ready to use APIs, for hassle free calculation of the CRC of the program memory, using CRC and memory scan hardware peripheral in the PIC microcontrollers.
+CRC module is a hardware implemented checksum generator which can compute 16-bit CRC with programmable polynomial. It also uses a memory scanner feature which provides an automatic flash read for CRC calculations. Configuring the CRC module is easy using the MCC GUI. Apart from the module configuration, MCC generates ready to use APIs, for hassle free calculation of the CRC of the program memory, using CRC and memory scan hardware peripheral in the PIC microcontrollers.

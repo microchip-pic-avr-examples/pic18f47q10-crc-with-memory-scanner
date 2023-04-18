@@ -38,7 +38,7 @@
         },
           
         "peripherals": [
-            "CRC", "USART", "NVM"
+            "CRC", "USART", "FLASH"
         ],
         "keywords": [
             "CRCSCAN",
