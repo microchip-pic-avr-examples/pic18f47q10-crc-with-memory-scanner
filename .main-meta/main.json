@@ -20,7 +20,7 @@
 		],
         "dfp": {
             "name": "PIC18F-Q_DFP",
-            "semverRange": "^1.14.237"
+            "semverRange": "^1.17.349"
         },
         "configurator": {
             "name": "MCC",
@@ -47,7 +47,7 @@
 			"EEDATA",
             "Melody"
         ],
-		 "author": "Microchip",
+		 "author": "Anoop Kumar",
 		  
 		"additionalData": {
 			"longDescription": {
